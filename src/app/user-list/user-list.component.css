@@ -1,0 +1,102 @@
+/* Estilo do Titulo */
+header {
+  text-align: center;
+  font-size: 1.3em;
+}
+
+/* Estilo para a adição de usuários */
+.add-user {
+    border-radius: 0;
+    height: 14px;
+    line-height: 14px;
+    color: #000000;
+    width: 185px;
+    font-size: 20px;
+    font-weight: 100;
+    padding: 10px;
+    display: inline-block;
+    cursor: pointer;
+    text-align: center;
+ }
+
+  .form-group {
+    background-color: #f2f2f2;
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 4px;
+  }
+
+  /* Estilo para o botão de Adicionar Usuário */
+  .add-button {
+    background-color: #f2f2f2;
+    color: #000000;
+    padding: 10px 10px;
+    border-radius: 4px;
+    cursor: pointer;
+  }  
+
+  /* Estilo para cada item de usuário */
+  .user-item {
+    background-color: #f2f2f2;
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 4px;
+  }
+  
+  /* Estilo para o botão de apagar */
+  .delete-button {
+    background-color: #e74c3c;
+    color: #ffffff;
+    padding: 5px 10px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+
+  /* Estilo para o botão de Detalhes*/
+  .detail-button {
+    background-color: #3498db;
+    color: #fff;
+    padding: 5px 10px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+    
+  /* Estilo para o botão de editar */
+  .edit-button {
+    background-color: #2ecc71;
+    color: #fff;
+    padding: 5px 10px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  
+  /* Estilo para os campos de edição */
+  .edit-fields {
+    display: flex;
+    flex-direction: column;
+    margin-top: 10px;
+  }
+  
+  /* Estilo para o botão de salvar */
+  .save-button {
+    background-color: #28a745;
+    color: #fff;
+    padding: 5px 10px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  /* Estilo para o botão de cancelar */
+  .cancel-button {
+    background-color: #6c757d;
+    color: #fff;
+    padding: 5px 10px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }

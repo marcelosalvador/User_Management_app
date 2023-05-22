@@ -1,0 +1,72 @@
+<div class="container">
+  <header>
+    <h1><p>Lista de Usuários</p></h1>
+  </header>
+
+  <div *ngIf="showAddUser" class="add-user">
+    <div class="form-group">
+      <label class="input-label">Nome:</label>
+      <input type="text" [(ngModel)]="newUser.name">
+    </div>
+    <div class="form-group">
+      <label class="input-label">Sobrenome:</label>
+      <input type="text" [(ngModel)]="newUser.lastName">
+    </div>
+    <div class="form-group">
+      <label class="input-label">E-mail:</label>
+      <input type="text" [(ngModel)]="newUser.email">
+    </div>
+    <div class="form-group">
+      <label class="input-label">Profissão:</label>
+      <input type="text" [(ngModel)]="newUser.profession">
+    </div>
+    <div class="form-group">
+      <label class="input-label">Idade:</label>
+      <input type="number" [(ngModel)]="newUser.age">
+    </div>
+    <button class="add-button" (click)="addUser()">Adicionar Usuário</button>
+  </div>
+  <button *ngIf="!showAddUser" class="add-button" (click)="showAddUser = true">Adicionar Usuário</button>
+
+  <ul>
+    <li *ngFor="let user of users" class="user-item">
+      <span>{{ user.name }} - {{ user.email }}</span>
+
+      <button class="detail-button" (click)="toggleDetails(user)">Detalhes</button>
+      <button class="edit-button" (click)="editUser(user)">Editar</button>
+      <button class="delete-button" (click)="deleteUser(user)">Apagar</button>
+
+      <div *ngIf="user.showDetails" class="user-details">
+        <p><strong>Sobrenome:</strong> {{ user.lastName }}</p>
+        <p><strong>Profissão:</strong> {{ user.profession }}</p>
+        <p><strong>Idade:</strong> {{ user.age }}</p>
+      </div>
+      
+      <div *ngIf="editingUser === user" class="edit-user-form">
+        <h3>Editar Usuário</h3>
+        <div>
+          <label>Nome:</label>
+          <input type="text" [(ngModel)]="user.name">
+        </div>
+        <div>
+          <label>Sobrenome:</label>
+          <input type="text" [(ngModel)]="user.lastName">
+        </div>
+        <div>
+          <label>E-mail:</label>
+          <input type="text" [(ngModel)]="user.email">
+        </div>
+        <div>
+          <label>Profissão:</label>
+          <input type="text" [(ngModel)]="user.profession">
+        </div>
+        <div>
+          <label>Idade:</label>
+          <input type="number" [(ngModel)]="user.age">
+        </div>
+        <button class="save-button" (click)="saveUser(user)">Salvar</button>
+        <button class="cancel-button" (click)="cancelEdit()">Cancelar</button>
+        </div>
+    </li>
+  </ul>
+</div>
